@@ -1,11 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Signal 200 OK | Piso WiFi Network Services</title>
+
+  <!-- PyScript -->
+  <link rel="stylesheet" href="https://pyscript.net/releases/2024.11.1/core.css">
+  <script type="module" src="https://pyscript.net/releases/2024.11.1/core.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Nunito+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+  <!-- ============ HEADER ============ -->
+  <header>
+    <div class="bar">
+      <a class="brand" href="#home" aria-label="Signal 200 OK home">
+        <!-- LOGO PLACEHOLDER: replace this div with <img src="logo.png" alt="Signal 200 OK logo" width="38" height="38"> -->
+        <div class="logo-placeholder" aria-hidden="true">LOGO</div>
+        <span class="brand-name">Signal 200 OK</span>
+      </a>
+      <nav aria-label="Main">
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact Us</a>
+      </nav>
+    </div>
+  </header>
     
+    <main>
+        <!-- ============ LANDING PAGE ============ -->
+        <section class="hero" id="home">
+            <div class="hero-inner">
+                <div>
+                <h1>No bars? <span>Still online.</span></h1>
+                <p>Coin-operated Piso WiFi placed right where your phone signal fails on campus. No password, no monthly plan. Just drop a coin and connect.</p>
+                <div class="btns">
+                    <a class="btn btn-green" href="#calculator">Try the coin calculator</a>
+                    <a class="btn btn-ghost" href="#deadzones">Report a dead zone</a>
+                </div>
+                </div>
+                <!-- INTERACTIVE FEATURE 1: coin calculator -->
+                <div class="card" id="calculator">
+                <h2>How long will my coins last?</h2>
+                <p class="hint">Enter how many pesos you have.</p>
+                <label for="coins">Amount (₱)</label>
+                <div class="row">
+                    <input type="number" id="coins" min="1" step="1" placeholder="e.g. 12">
+                    <button class="btn btn-green" id="calc-btn" type="button">Calculate</button>
+                </div>
+                <div class="result" id="calc-result" aria-live="polite">Your result will show here.</div>
+                </div>
+            </div>
+        </section>    
+    </main>
+
+
 </body>
 </html>
