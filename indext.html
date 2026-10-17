@@ -57,8 +57,61 @@
                 <div class="result" id="calc-result" aria-live="polite">Your result will show here.</div>
                 </div>
             </div>
-        </section>    
+        </section> 
+        
+        <section class="page" id="advertisement" style="padding-bottom:0">
+      <div class="wrap">
+        <div class="ad-toolbar">
+          <h2>Featured</h2>
+          <button class="theater-btn" id="theater-btn" type="button" aria-pressed="false">Theater mode</button>
+        </div>
+        <!-- To add your ad, replace the <div> below with: <img src="ad-poster.png" alt="Signal 200 OK Piso WiFi advertisement"> -->
+        <div class="ad-space">
+          <div>
+            <strong>Advertisement space</strong>
+            Place your Piso WiFi poster, product photo or promo banner here.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="page alt" id="packages">
+      <div class="wrap">
+        <h2 class="title">Pick a package</h2>
+        <p class="lead">Students told us they only need a little internet at a time, so every coin amount has a package.</p>
+        <div class="packs">
+          <div class="pack"><div class="price">₱1</div><p>15 minutes</p><p>Check an announcement or send a quick message.</p></div>
+          <div class="pack"><div class="price">₱5</div><p>1 hour</p><p>Open modules and download class files.</p></div>
+          <div class="pack best"><span class="tag">Most chosen</span><div class="price">₱10</div><p>3.5 hours</p><p>Research and submit assignments between classes.</p></div>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="page" id="deadzones">
+      <div class="wrap two">
+        <div>
+          <h2 class="title">Where is your signal weakest?</h2>
+          <p class="lead">Tap a place to add your vote. The starting numbers come from our survey of 30 students.</p>
+          <div class="vote-buttons" id="vote-buttons">
+            <button class="vote-btn" type="button" data-zone="Canteen">Canteen</button>
+            <button class="vote-btn" type="button" data-zone="Classrooms">Classrooms</button>
+            <button class="vote-btn" type="button" data-zone="ComLabs">ComLabs</button>
+            <button class="vote-btn" type="button" data-zone="GBG Building">GBG Building</button>
+            <button class="vote-btn" type="button" data-zone="Library">Library</button>
+          </div>
+        </div>
+        <div class="card" style="border:2px solid var(--line)">
+          <h2>Dead zone ranking</h2>
+          <p class="hint" id="vote-total"></p>
+          <div id="vote-chart"></div>
+        </div>
+      </div>
+    </section>
     </main>
+
+
 
 
 </body>
