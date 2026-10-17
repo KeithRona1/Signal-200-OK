@@ -70,3 +70,57 @@ body.no-scroll { overflow: hidden; }
 nav { display: flex; gap: 6px; }
 nav a { text-decoration: none; padding: 8px 14px; border-radius: 8px; font-weight: 600; }
 nav a:hover { background: var(--navy-2); }
+
+/* Hero */
+.hero { background: var(--navy); color: #fff; padding: 56px 20px 72px; }
+.hero-inner {
+  max-width: 1000px; margin: 0 auto;
+  display: grid; grid-template-columns: 1.1fr 1fr; gap: 40px; align-items: center;
+}
+.hero h1 { font-size: clamp(2.2rem, 5vw, 3.4rem); font-weight: 800; margin-bottom: 14px; }
+.hero h1 span { color: var(--green); }
+.hero p { color: #c4d0e4; max-width: 46ch; margin-bottom: 24px; }
+.btns { display: flex; gap: 12px; flex-wrap: wrap; }
+.btn {
+  font: inherit; font-weight: 700; cursor: pointer; border: 0; text-decoration: none;
+  padding: 12px 22px; border-radius: 10px; display: inline-block;
+}
+.btn-green { background: var(--green); color: var(--navy); }
+.btn-green:hover { background: #3ddb98; }
+.btn-ghost { background: transparent; color: #fff; border: 2px solid #3a5280; }
+.btn-ghost:hover { border-color: #fff; }
+
+/* Calculator card */
+.card { background: #fff; color: var(--ink); border-radius: 16px; padding: 24px; }
+.hero .card { box-shadow: 0 0 0 6px rgba(25,195,125,.25); }
+.card h2 { font-size: 1.3rem; margin-bottom: 4px; }
+.card .hint { color: var(--muted); font-size: .95rem; margin-bottom: 14px; }
+label { display: block; font-weight: 600; margin: 12px 0 4px; }
+input, select, textarea {
+  width: 100%; font: inherit; padding: 11px 12px; border: 2px solid var(--line);
+  border-radius: 10px; background: #fff; color: var(--ink);
+}
+input:focus, select:focus, textarea:focus { border-color: var(--green); outline: none; }
+.row { display: flex; gap: 10px; align-items: stretch; }
+.row input { flex: 1; }
+.result {
+  margin-top: 14px; padding: 14px; border-radius: 10px; background: var(--paper);
+  border-left: 5px solid var(--amber); min-height: 56px;
+}
+.result.error { border-left-color: #d94a4a; }
+.big { font-family: "Bricolage Grotesque", sans-serif; font-size: 1.7rem; font-weight: 800; }
+
+/* Sections */
+section.page { padding: 64px 20px; }
+.wrap { max-width: 1000px; margin: 0 auto; }
+.page h2.title { font-size: 2rem; margin-bottom: 12px; }
+.lead { color: var(--muted); max-width: 62ch; margin-bottom: 28px; }
+.alt { background: #fff; }
+
+.packs { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; }
+.pack { border: 2px solid var(--line); border-radius: 14px; padding: 20px; background: var(--paper); }
+.pack .price { font-family: "Bricolage Grotesque", sans-serif; font-size: 2rem; font-weight: 800; color: var(--navy); }
+.pack.best { border-color: var(--green); }
+.tag { display: inline-block; background: var(--green); color: var(--navy); font-size: .8rem; font-weight: 700; padding: 2px 10px; border-radius: 99px; }
+
+.two { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
