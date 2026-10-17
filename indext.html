@@ -1,168 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Signal 200 OK | Piso WiFi Network Services</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Signal 200 OK | Piso WiFi Network Services</title>
 
-  <!-- PyScript -->
-  <link rel="stylesheet" href="https://pyscript.net/releases/2024.11.1/core.css">
-  <script type="module" src="https://pyscript.net/releases/2024.11.1/core.js"></script>
+    <!-- PyScript -->
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.11.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.11.1/core.js"></script>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Nunito+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Nunito+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <!-- ============ HEADER ============ -->
-  <header>
-    <div class="bar">
-      <a class="brand" href="#home" aria-label="Signal 200 OK home">
-        <!-- LOGO PLACEHOLDER: replace this div with <img src="logo.png" alt="Signal 200 OK logo" width="38" height="38"> -->
-        <div class="logo-placeholder" aria-hidden="true">LOGO</div>
-        <span class="brand-name">Signal 200 OK</span>
-      </a>
-      <nav aria-label="Main">
-        <a href="#home">Home</a>
-        <a href="#about">About Us</a>
-        <a href="#contact">Contact Us</a>
-      </nav>
-    </div>
-  </header>
-    
+    <!-- ============ HEADER ============ -->
+    <header>
+        <div class="bar">
+            <a class="brand" href="#home" aria-label="Signal 200 OK home">
+                <!-- LOGO PLACEHOLDER: replace this div with <img src="logo.png" alt="Signal 200 OK logo" width="38" height="38"> -->
+                <div class="logo-placeholder" aria-hidden="true">LOGO</div>
+                <span class="brand-name">Signal 200 OK</span>
+            </a>
+            <nav aria-label="Main">
+                <a href="#home">Home</a>
+                <a href="#about">About Us</a>
+                <a href="#contact">Contact Us</a>
+            </nav>
+        </div>
+    </header>
+
     <main>
         <!-- ============ LANDING PAGE ============ -->
         <section class="hero" id="home">
             <div class="hero-inner">
                 <div>
-                <h1>No bars? <span>Still online.</span></h1>
-                <p>Coin-operated Piso WiFi placed right where your phone signal fails on campus. No password, no monthly plan. Just drop a coin and connect.</p>
-                <div class="btns">
-                    <a class="btn btn-green" href="#calculator">Try the coin calculator</a>
-                    <a class="btn btn-ghost" href="#deadzones">Report a dead zone</a>
-                </div>
+                    <h1>No bars? <span>Still online.</span></h1>
+                    <p>Coin-operated Piso WiFi placed right where your phone signal fails on campus. No password, no
+                        monthly plan. Just drop a coin and connect.</p>
+                    <div class="btns">
+                        <a class="btn btn-green" href="#calculator">Try the coin calculator</a>
+                        <a class="btn btn-ghost" href="#deadzones">Report a dead zone</a>
+                    </div>
                 </div>
                 <!-- INTERACTIVE FEATURE 1: coin calculator -->
                 <div class="card" id="calculator">
-                <h2>How long will my coins last?</h2>
-                <p class="hint">Enter how many pesos you have.</p>
-                <label for="coins">Amount (₱)</label>
-                <div class="row">
-                    <input type="number" id="coins" min="1" step="1" placeholder="e.g. 12">
-                    <button class="btn btn-green" id="calc-btn" type="button">Calculate</button>
-                </div>
-                <div class="result" id="calc-result" aria-live="polite">Your result will show here.</div>
+                    <h2>How long will my coins last?</h2>
+                    <p class="hint">Enter how many pesos you have.</p>
+                    <label for="coins">Amount (₱)</label>
+                    <div class="row">
+                        <input type="number" id="coins" min="1" step="1" placeholder="e.g. 12">
+                        <button class="btn btn-green" id="calc-btn" type="button">Calculate</button>
+                    </div>
+                    <div class="result" id="calc-result" aria-live="polite">Your result will show here.</div>
                 </div>
             </div>
-        </section> 
-        
+        </section>
+
         <!-- ADVERTISEMENT SPACE -->
         <section class="page" id="advertisement" style="padding-bottom:0">
-        <div class="wrap">
-        <div class="ad-toolbar">
-          <h2>Featured</h2>
-          <button class="theater-btn" id="theater-btn" type="button" aria-pressed="false">Theater mode</button>
-        </div>
-        <!-- To add your ad, replace the <div> below with: <img src="ad-poster.png" alt="Signal 200 OK Piso WiFi advertisement"> -->
-        <div class="ad-space">
-          <div>
-            <strong>Advertisement space</strong>
-            Place your Piso WiFi poster, product photo or promo banner here.
-          </div>
-        </div>
-      </div>
-    </section>
+            <div class="wrap">
+                <div class="ad-toolbar">
+                    <h2>Featured</h2>
+                    <button class="theater-btn" id="theater-btn" type="button" aria-pressed="false">Theater
+                        mode</button>
+                </div>
+                <!-- To add your ad, replace the <div> below with: <img src="ad-poster.png" alt="Signal 200 OK Piso WiFi advertisement"> -->
+                <div class="ad-space">
+                    <div>
+                        <strong>Advertisement space</strong>
+                        Place your Piso WiFi poster, product photo or promo banner here.
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <!-- Packages -->
-    <section class="page alt" id="packages">
-      <div class="wrap">
-        <h2 class="title">Pick a package</h2>
-        <p class="lead">Students told us they only need a little internet at a time, so every coin amount has a package.</p>
-        <div class="packs">
-          <div class="pack"><div class="price">₱1</div><p>15 minutes</p><p>Check an announcement or send a quick message.</p></div>
-          <div class="pack"><div class="price">₱5</div><p>1 hour</p><p>Open modules and download class files.</p></div>
-          <div class="pack best"><span class="tag">Most chosen</span><div class="price">₱10</div><p>3.5 hours</p><p>Research and submit assignments between classes.</p></div>
-        </div>
-      </div>
-    </section>
+        <!-- Packages -->
+        <section class="page alt" id="packages">
+            <div class="wrap">
+                <h2 class="title">Pick a package</h2>
+                <p class="lead">Students told us they only need a little internet at a time, so every coin amount has a
+                    package.</p>
+                <div class="packs">
+                    <div class="pack">
+                        <div class="price">₱1</div>
+                        <p>15 minutes</p>
+                        <p>Check an announcement or send a quick message.</p>
+                    </div>
+                    <div class="pack">
+                        <div class="price">₱5</div>
+                        <p>1 hour</p>
+                        <p>Open modules and download class files.</p>
+                    </div>
+                    <div class="pack best"><span class="tag">Most chosen</span>
+                        <div class="price">₱10</div>
+                        <p>3.5 hours</p>
+                        <p>Research and submit assignments between classes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <!-- INTERACTIVE FEATURE 2: dead zone voting -->
-    <section class="page" id="deadzones">
-      <div class="wrap two">
-        <div>
-          <h2 class="title">Where is your signal weakest?</h2>
-          <p class="lead">Tap a place to add your vote. The starting numbers come from our survey of 30 students.</p>
-          <div class="vote-buttons" id="vote-buttons">
-            <button class="vote-btn" type="button" data-zone="Canteen">Canteen</button>
-            <button class="vote-btn" type="button" data-zone="Classrooms">Classrooms</button>
-            <button class="vote-btn" type="button" data-zone="ComLabs">ComLabs</button>
-            <button class="vote-btn" type="button" data-zone="GBG Building">GBG Building</button>
-            <button class="vote-btn" type="button" data-zone="Library">Library</button>
-          </div>
-        </div>
-        <div class="card" style="border:2px solid var(--line)">
-          <h2>Dead zone ranking</h2>
-          <p class="hint" id="vote-total"></p>
-          <div id="vote-chart"></div>
-        </div>
-      </div>
-    </section>
-    
-    <!-- ============ ABOUT US ============ -->
-    <section class="page alt" id="about">
-      <div class="wrap">
-        <h2 class="title">About Us</h2>
-        <p class="lead">We are Signal 200 OK, a group of IT students at Cebu Eastern College. Our name is a nod to the HTTP status code that means “everything worked.” We set up Piso WiFi machines in campus dead zones so students can get online fast and cheap, without buying a weekly data load.</p>
-        <h3>The team</h3>
-        <ul class="team">
-          <li>Keith C. Rona</li>
-          <li>Aldrin O. Luna</li>
-          <li>Mark V. Rosales</li>
-          <li>John Lloyd P. Ponce</li>
-          <li>Kirk Benedict A. Enriquez</li>
-        </ul>
-        <p class="meta">College of Information Technology, Cebu Eastern College, Inc. · Instructor: Vincent John Cababan · Section 4</p>
-      </div>
-    </section>
+        <!-- INTERACTIVE FEATURE 2: dead zone voting -->
+        <section class="page" id="deadzones">
+            <div class="wrap two">
+                <div>
+                    <h2 class="title">Where is your signal weakest?</h2>
+                    <p class="lead">Tap a place to add your vote. The starting numbers come from our survey of 30
+                        students.</p>
+                    <div class="vote-buttons" id="vote-buttons">
+                        <button class="vote-btn" type="button" data-zone="Canteen">Canteen</button>
+                        <button class="vote-btn" type="button" data-zone="Classrooms">Classrooms</button>
+                        <button class="vote-btn" type="button" data-zone="ComLabs">ComLabs</button>
+                        <button class="vote-btn" type="button" data-zone="GBG Building">GBG Building</button>
+                        <button class="vote-btn" type="button" data-zone="Library">Library</button>
+                    </div>
+                </div>
+                <div class="card" style="border:2px solid var(--line)">
+                    <h2>Dead zone ranking</h2>
+                    <p class="hint" id="vote-total"></p>
+                    <div id="vote-chart"></div>
+                </div>
+            </div>
+        </section>
 
-    <!-- ============ CONTACT US ============ -->
-    <section class="page" id="contact">
-      <div class="wrap two">
-        <div class="contact-info">
-          <h2 class="title">Contact Us</h2>
-          <p class="lead">Questions, a machine that is not working, or a spot that needs WiFi? Reach out.</p>
-          <p><strong>Phone</strong><a href="tel:+639000000000">0900 000 0000</a></p>
-          <p><strong>Email</strong><a href="mailto:cecitdepartment@gmail.com">cecitdepartment@gmail.com</a></p>
-          <p><strong>Address</strong>Leon Kilat St., Pahina Central, Cebu City, Cebu</p>
-        </div>
+        <!-- ============ ABOUT US ============ -->
+        <section class="page alt" id="about">
+            <div class="wrap">
+                <h2 class="title">About Us</h2>
+                <p class="lead">We are Signal 200 OK, a group of IT students at Cebu Eastern College. Our name is a nod
+                    to the HTTP status code that means “everything worked.” We set up Piso WiFi machines in campus dead
+                    zones so students can get online fast and cheap, without buying a weekly data load.</p>
+                <h3>The team</h3>
+                <ul class="team">
+                    <li>Keith C. Rona</li>
+                    <li>Aldrin O. Luna</li>
+                    <li>Mark V. Rosales</li>
+                    <li>John Lloyd P. Ponce</li>
+                    <li>Kirk Benedict A. Enriquez</li>
+                </ul>
+                <p class="meta">College of Information Technology, Cebu Eastern College, Inc. · Instructor: Vincent John
+                    Cababan · Section 4</p>
+            </div>
+        </section>
 
-        <!-- INTERACTIVE FEATURE 3: form submission -->
-        <form class="card" id="contact-form" style="border:2px solid var(--line)">
-          <h2>Send us a message</h2>
-          <label for="c-name">Your name</label>
-          <input id="c-name" type="text" required>
-          <label for="c-topic">Topic</label>
-          <select id="c-topic">
-            <option>Machine problem</option>
-            <option>Request a new location</option>
-            <option>General question</option>
-          </select>
-          <label for="c-msg">Message</label>
-          <textarea id="c-msg" rows="3" required></textarea>
-          <div style="margin-top:14px"><button class="btn btn-green" type="submit">Send message</button></div>
-          <div id="form-result" aria-live="polite"></div>
-        </form>
-      </div>
-    </section>
-</main>
+        <!-- ============ CONTACT US ============ -->
+        <section class="page" id="contact">
+            <div class="wrap two">
+                <div class="contact-info">
+                    <h2 class="title">Contact Us</h2>
+                    <p class="lead">Questions, a machine that is not working, or a spot that needs WiFi? Reach out.</p>
+                    <p><strong>Phone</strong><a href="tel:+639000000000">0900 000 0000</a></p>
+                    <p><strong>Email</strong><a href="mailto:cecitdepartment@gmail.com">cecitdepartment@gmail.com</a>
+                    </p>
+                    <p><strong>Address</strong>Leon Kilat St., Pahina Central, Cebu City, Cebu</p>
+                </div>
 
-<footer>© 2026 Signal 200 OK · Piso WiFi Network Services · Cebu Eastern College, Inc.</footer>
+                <!-- INTERACTIVE FEATURE 3: form submission -->
+                <form class="card" id="contact-form" style="border:2px solid var(--line)">
+                    <h2>Send us a message</h2>
+                    <label for="c-name">Your name</label>
+                    <input id="c-name" type="text" required>
+                    <label for="c-topic">Topic</label>
+                    <select id="c-topic">
+                        <option>Machine problem</option>
+                        <option>Request a new location</option>
+                        <option>General question</option>
+                    </select>
+                    <label for="c-msg">Message</label>
+                    <textarea id="c-msg" rows="3" required></textarea>
+                    <div style="margin-top:14px"><button class="btn btn-green" type="submit">Send message</button></div>
+                    <div id="form-result" aria-live="polite"></div>
+                </form>
+            </div>
+        </section>
+    </main>
 
-  <!-- PyScript (event-driven code lives in main.py) -->
-  <script type="py" src="main.py"></script>
+    <footer>© 2026 Signal 200 OK · Piso WiFi Network Services · Cebu Eastern College, Inc.</footer>
+
+    <!-- PyScript (event-driven code lives in main.py) -->
+    <script type="py" src="main.py"></script>
 
 </body>
+
 </html>
