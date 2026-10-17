@@ -1,0 +1,72 @@
+:root {
+  --navy: #0c1b33;
+  --navy-2: #16294a;
+  --green: #19c37d;
+  --amber: #f2b632;
+  --paper: #f5f8fb;
+  --ink: #1b2536;
+  --muted: #5b6678;
+  --line: #dbe3ee;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: "Nunito Sans", system-ui, sans-serif;
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.6;
+}
+h1, h2, h3, .brand-name { font-family: "Bricolage Grotesque", system-ui, sans-serif; line-height: 1.15; }
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--amber); outline-offset: 2px; }
+
+/* Header */
+header { background: var(--navy); color: #fff; position: sticky; top: 0; z-index: 10; }
+.bar {
+  max-width: 1000px; margin: 0 auto; padding: 12px 20px;
+  display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+}
+.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.brand-name { font-size: 1.25rem; font-weight: 800; }
+.logo-placeholder {
+  width: 38px; height: 38px; border: 2px dashed #5d78a8; border-radius: 9px;
+  display: grid; place-items: center; font-size: .6rem; font-weight: 700; color: #9fb0cc;
+}
+.ad-space {
+  border: 3px dashed var(--line); border-radius: 16px; background: #fff;
+  aspect-ratio: 16 / 9; min-height: 420px; width: 100%;
+  display: grid; place-items: center; text-align: center; padding: 24px;
+  color: var(--muted); overflow: hidden;
+}
+.ad-space img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.ad-toolbar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; gap: 12px; flex-wrap: wrap; }
+.ad-toolbar h2 { font-size: 1.3rem; }
+.theater-btn {
+  font: inherit; font-weight: 700; cursor: pointer; padding: 8px 16px; border-radius: 10px;
+  border: 2px solid var(--navy); background: #fff; color: var(--navy);
+}
+.theater-btn:hover { background: var(--navy); color: #fff; }
+/* Theater mode: full-width dark stage, bigger ad */
+body.no-scroll { overflow: hidden; }
+#advertisement.theater {
+  position: fixed; inset: 0; z-index: 100; background: #05080f;
+  padding: 16px 20px !important; overflow: hidden;
+  display: flex; flex-direction: column; justify-content: center;
+}
+#advertisement.theater .wrap {
+  max-width: 1400px; width: 100%; height: 100%;
+  display: flex; flex-direction: column;
+}
+#advertisement.theater .ad-toolbar { flex: none; margin-bottom: 10px; }
+#advertisement.theater .ad-toolbar h2 { color: #fff; }
+#advertisement.theater .theater-btn { background: var(--green); border-color: var(--green); color: var(--navy); }
+#advertisement.theater .ad-space {
+  flex: 1; min-height: 0; aspect-ratio: auto;
+  border-color: #2a3a58; background: #0c1b33; color: #9fb0cc;
+}
+#advertisement.theater .ad-space img { object-fit: contain; }
+#advertisement.theater .ad-space strong { color: #fff; }
+.ad-space strong { display: block; color: var(--ink); font-size: 1.1rem; margin-bottom: 4px; }
+nav { display: flex; gap: 6px; }
+nav a { text-decoration: none; padding: 8px 14px; border-radius: 8px; font-weight: 600; }
+nav a:hover { background: var(--navy-2); }
