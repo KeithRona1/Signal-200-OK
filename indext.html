@@ -59,8 +59,9 @@
             </div>
         </section> 
         
+        <!-- ADVERTISEMENT SPACE -->
         <section class="page" id="advertisement" style="padding-bottom:0">
-      <div class="wrap">
+        <div class="wrap">
         <div class="ad-toolbar">
           <h2>Featured</h2>
           <button class="theater-btn" id="theater-btn" type="button" aria-pressed="false">Theater mode</button>
@@ -75,7 +76,7 @@
       </div>
     </section>
 
-    
+    <!-- Packages -->
     <section class="page alt" id="packages">
       <div class="wrap">
         <h2 class="title">Pick a package</h2>
@@ -88,7 +89,7 @@
       </div>
     </section>
 
-    
+    <!-- INTERACTIVE FEATURE 2: dead zone voting -->
     <section class="page" id="deadzones">
       <div class="wrap two">
         <div>
@@ -109,10 +110,59 @@
         </div>
       </div>
     </section>
-    </main>
+    
+    <!-- ============ ABOUT US ============ -->
+    <section class="page alt" id="about">
+      <div class="wrap">
+        <h2 class="title">About Us</h2>
+        <p class="lead">We are Signal 200 OK, a group of IT students at Cebu Eastern College. Our name is a nod to the HTTP status code that means “everything worked.” We set up Piso WiFi machines in campus dead zones so students can get online fast and cheap, without buying a weekly data load.</p>
+        <h3>The team</h3>
+        <ul class="team">
+          <li>Keith C. Rona</li>
+          <li>Aldrin O. Luna</li>
+          <li>Mark V. Rosales</li>
+          <li>John Lloyd P. Ponce</li>
+          <li>Kirk Benedict A. Enriquez</li>
+        </ul>
+        <p class="meta">College of Information Technology, Cebu Eastern College, Inc. · Instructor: Vincent John Cababan · Section 4</p>
+      </div>
+    </section>
 
+    <!-- ============ CONTACT US ============ -->
+    <section class="page" id="contact">
+      <div class="wrap two">
+        <div class="contact-info">
+          <h2 class="title">Contact Us</h2>
+          <p class="lead">Questions, a machine that is not working, or a spot that needs WiFi? Reach out.</p>
+          <p><strong>Phone</strong><a href="tel:+639000000000">0900 000 0000</a></p>
+          <p><strong>Email</strong><a href="mailto:cecitdepartment@gmail.com">cecitdepartment@gmail.com</a></p>
+          <p><strong>Address</strong>Leon Kilat St., Pahina Central, Cebu City, Cebu</p>
+        </div>
 
+        <!-- INTERACTIVE FEATURE 3: form submission -->
+        <form class="card" id="contact-form" style="border:2px solid var(--line)">
+          <h2>Send us a message</h2>
+          <label for="c-name">Your name</label>
+          <input id="c-name" type="text" required>
+          <label for="c-topic">Topic</label>
+          <select id="c-topic">
+            <option>Machine problem</option>
+            <option>Request a new location</option>
+            <option>General question</option>
+          </select>
+          <label for="c-msg">Message</label>
+          <textarea id="c-msg" rows="3" required></textarea>
+          <div style="margin-top:14px"><button class="btn btn-green" type="submit">Send message</button></div>
+          <div id="form-result" aria-live="polite"></div>
+        </form>
+      </div>
+    </section>
+</main>
 
+<footer>© 2026 Signal 200 OK · Piso WiFi Network Services · Cebu Eastern College, Inc.</footer>
+
+  <!-- PyScript (event-driven code lives in main.py) -->
+  <script type="py" src="main.py"></script>
 
 </body>
 </html>
