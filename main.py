@@ -60,58 +60,7 @@ if calc_btn:
     calc_btn.onclick = calculate_wifi_time
 
 
-# --- 2. DEAD ZONE VOTING SYSTEM ---
-votes = {
-    "Canteen": 8,
-    "Classrooms": 10,
-    "ComLabs": 3,
-    "GBG Building": 5,
-    "Library": 4
-}
-
-def render_vote_chart():
-    total_votes = sum(votes.values())
-    total_elem = document.querySelector("#vote-total")
-    chart_elem = document.querySelector("#vote-chart")
-    
-    if total_elem:
-        total_elem.innerText = f"Total community votes recorded: {total_votes}"
-        
-    if chart_elem:
-        html_content = ""
-        for zone, count in sorted(votes.items(), key=lambda x: x[1], reverse=True):
-            pct = (count / total_votes * 100) if total_votes > 0 else 0
-            html_content += f"""
-                <div class="bar-row">
-                    <div class="bar-label">
-                        <span>{zone}</span>
-                        <span>{count} votes ({pct:.1f}%)</span>
-                    </div>
-                    <div class="track">
-                        <div class="fill" style="width: {pct}%;"></div>
-                    </div>
-                </div>
-            """
-        chart_elem.innerHTML = html_content
-
-def handle_vote(zone_name):
-    if zone_name in votes:
-        votes[zone_name] += 1
-        render_vote_chart()
-
-# Bind voting buttons dynamically
-vote_buttons = document.querySelectorAll(".vote-btn")
-for btn in vote_buttons:
-    zone = btn.getAttribute("data-zone")
-    def make_handler(z):
-        return lambda event: handle_vote(z)
-    btn.onclick = make_handler(zone)
-
-# Initial render of the chart on load
-render_vote_chart()
-
-
-# --- 3. THEATER MODE TOGGLE ---
+# --- 2. THEATER MODE TOGGLE ---
 def toggle_theater(event):
     ad_section = document.querySelector("#advertisement")
     body = document.body
@@ -136,7 +85,7 @@ if theater_btn:
     theater_btn.onclick = toggle_theater
 
 
-# --- 4. CONTACT FORM SUBMISSION ---
+# --- 3. CONTACT FORM SUBMISSION ---
 def handle_contact(event):
     event.preventDefault()
     name_input_elem = document.querySelector("#c-name")
