@@ -4,7 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Signal 200 OK - Coin-operated Piso WiFi Network Services placed in campus dead zones at Cebu Eastern College. Fast, cheap, and password-free.">
     <title>Signal 200 OK | Piso WiFi Network Services</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="logo.png">
 
     <!-- PyScript -->
     <link rel="stylesheet" href="https://pyscript.net/releases/2024.11.1/core.css">
@@ -13,31 +17,29 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Nunito+Sans:wght@400;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Nunito+Sans:wght@400;600;700&display=swap"
         rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <!-- ============ HEADER ============ -->
-    <header>
-        <div class="bar">
-            <a class="brand" href="#home" aria-label="Signal 200 OK home">
-                <!-- LOGO PLACEHOLDER: replace this div with <img src="logo.png" alt="Signal 200 OK logo" width="38" height="38"> -->
-                <div class="logo-placeholder" aria-hidden="true">LOGO</div>
-                <span class="brand-name">Signal 200 OK</span>
-            </a>
-            <nav aria-label="Main">
-                <a href="#home">Home</a>
-                <a href="#about">About Us</a>
-                <a href="#contact">Contact Us</a>
-            </nav>
-        </div>
-    </header>
+    <!-- ============ HEADER & HERO WRAPPER (Full Navy Background) ============ -->
+    <div class="header-hero-wrapper">
+        <header>
+            <div class="bar">
+                <a class="brand" href="#home" aria-label="Signal 200 OK home">
+                    <img src="logo.png" alt="Signal 200 OK logo" width="48" height="48" style="border-radius: 50%; object-fit: cover;">
+                    <span class="brand-name">Signal 200 OK</span>
+                </a>
+                <nav aria-label="Main">
+                    <a href="#home">Home</a>
+                    <a href="#about">About Us</a>
+                    <a href="#contact">Contact Us</a>
+                </nav>
+            </div>
+        </header>
 
-    <main>
-        <!-- ============ LANDING PAGE ============ -->
         <section class="hero" id="home">
             <div class="hero-inner">
                 <div>
@@ -62,16 +64,16 @@
                 </div>
             </div>
         </section>
+    </div>
 
+    <main>
         <!-- ADVERTISEMENT SPACE -->
         <section class="page" id="advertisement" style="padding-bottom:0">
             <div class="wrap">
                 <div class="ad-toolbar">
                     <h2>Featured</h2>
-                    <button class="theater-btn" id="theater-btn" type="button" aria-pressed="false">Theater
-                        mode</button>
+                    <button class="theater-btn" id="theater-btn" type="button" aria-pressed="false">Theater mode</button>
                 </div>
-                <!-- To add your ad, replace the <div> below with: <img src="ad-poster.png" alt="Signal 200 OK Piso WiFi advertisement"> -->
                 <div class="ad-space">
                     <div>
                         <strong>Advertisement space</strong>
@@ -85,8 +87,7 @@
         <section class="page alt" id="packages">
             <div class="wrap">
                 <h2 class="title">Pick a package</h2>
-                <p class="lead">Students told us they only need a little internet at a time, so every coin amount has a
-                    package.</p>
+                <p class="lead">Students told us they only need a little internet at a time, so every coin amount has a package.</p>
                 <div class="packs">
                     <div class="pack">
                         <div class="price">₱1</div>
@@ -112,8 +113,7 @@
             <div class="wrap two">
                 <div>
                     <h2 class="title">Where is your signal weakest?</h2>
-                    <p class="lead">Tap a place to add your vote. The starting numbers come from our survey of 30
-                        students.</p>
+                    <p class="lead">Tap a place to add your vote. The starting numbers come from our survey of 30 students.</p>
                     <div class="vote-buttons" id="vote-buttons">
                         <button class="vote-btn" type="button" data-zone="Canteen">Canteen</button>
                         <button class="vote-btn" type="button" data-zone="Classrooms">Classrooms</button>
@@ -134,9 +134,7 @@
         <section class="page alt" id="about">
             <div class="wrap">
                 <h2 class="title">About Us</h2>
-                <p class="lead">We are Signal 200 OK, a group of IT students at Cebu Eastern College. Our name is a nod
-                    to the HTTP status code that means “everything worked.” We set up Piso WiFi machines in campus dead
-                    zones so students can get online fast and cheap, without buying a weekly data load.</p>
+                <p class="lead">We are Signal 200 OK, a group of IT students at Cebu Eastern College. Our name is a nod to the HTTP status code that means “everything worked.” We set up Piso WiFi machines in campus dead zones so students can get online fast and cheap, without buying a weekly data load.</p>
                 <h3>The team</h3>
                 <ul class="team">
                     <li>Keith C. Rona</li>
@@ -145,8 +143,7 @@
                     <li>John Lloyd P. Ponce</li>
                     <li>Kirk Benedict A. Enriquez</li>
                 </ul>
-                <p class="meta">College of Information Technology, Cebu Eastern College, Inc. · Instructor: Vincent John
-                    Cababan · Section 4</p>
+                <p class="meta">College of Information Technology, Cebu Eastern College, Inc. · Instructor: Vincent John Cababan · Section 4</p>
             </div>
         </section>
 
@@ -157,8 +154,7 @@
                     <h2 class="title">Contact Us</h2>
                     <p class="lead">Questions, a machine that is not working, or a spot that needs WiFi? Reach out.</p>
                     <p><strong>Phone</strong><a href="tel:+639000000000">0900 000 0000</a></p>
-                    <p><strong>Email</strong><a href="mailto:cecitdepartment@gmail.com">cecitdepartment@gmail.com</a>
-                    </p>
+                    <p><strong>Email</strong><a href="mailto:cecitdepartment@gmail.com">cecitdepartment@gmail.com</a></p>
                     <p><strong>Address</strong>Leon Kilat St., Pahina Central, Cebu City, Cebu</p>
                 </div>
 
@@ -184,7 +180,7 @@
 
     <footer>© 2026 Signal 200 OK · Piso WiFi Network Services · Cebu Eastern College, Inc.</footer>
 
-    <!-- PyScript (event-driven code lives in main.py) -->
+    <!-- PyScript -->
     <script type="py" src="main.py"></script>
 
 </body>
