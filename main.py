@@ -60,32 +60,7 @@ if calc_btn:
     calc_btn.onclick = calculate_wifi_time
 
 
-# --- 2. THEATER MODE TOGGLE ---
-def toggle_theater(event):
-    ad_section = document.querySelector("#advertisement")
-    body = document.body
-    btn = document.querySelector("#theater-btn")
-    
-    if not ad_section or not btn:
-        return
-
-    if "theater" in ad_section.className:
-        ad_section.className = "page"
-        body.className = ""
-        btn.innerText = "Theater mode"
-        btn.setAttribute("aria-pressed", "false")
-    else:
-        ad_section.className = "page alt theater"
-        body.className = "no-scroll"
-        btn.innerText = "Exit theater"
-        btn.setAttribute("aria-pressed", "true")
-
-theater_btn = document.querySelector("#theater-btn")
-if theater_btn:
-    theater_btn.onclick = toggle_theater
-
-
-# --- 3. CONTACT FORM SUBMISSION ---
+# --- 2. CONTACT FORM SUBMISSION ---
 def handle_contact(event):
     event.preventDefault()
     name_input_elem = document.querySelector("#c-name")
