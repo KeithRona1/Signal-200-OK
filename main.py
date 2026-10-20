@@ -8,6 +8,9 @@ def calculate_wifi_time(event):
     input_elem = document.querySelector("#coins")
     result_elem = document.querySelector("#calc-result")
     
+    if not input_elem or not result_elem:
+        return
+    
     try:
         val = input_elem.value.strip()
         if not val:
@@ -33,7 +36,13 @@ def calculate_wifi_time(event):
         hrs = total_minutes // 60
         mins = total_minutes % 60
         
-        time_str = f"{hrs} hour(s) and {mins} minute(s)" if hrs > 0 else f"{mins} minutes"
+        if hrs > 0 and mins > 0:
+            time_str = f"{hrs} hour(s) and {mins} minute(s)"
+        elif hrs > 0:
+            time_str = f"{hrs} hour(s)"
+        else:
+            time_str = f"{mins} minutes"
+            
         calc_counter += 1
         
         result_elem.className = "result"
@@ -108,6 +117,9 @@ def toggle_theater(event):
     body = document.body
     btn = document.querySelector("#theater-btn")
     
+    if not ad_section or not btn:
+        return
+
     if "theater" in ad_section.className:
         ad_section.className = "page"
         body.className = ""
@@ -127,14 +139,21 @@ if theater_btn:
 # --- 4. CONTACT FORM SUBMISSION ---
 def handle_contact(event):
     event.preventDefault()
-    name_input = document.querySelector("#c-name").value.strip()
+    name_input_elem = document.querySelector("#c-name")
     form_result = document.querySelector("#form-result")
+    
+    if not name_input_elem or not form_result:
+        return
+        
+    name_input = name_input_elem.value.strip()
     
     if name_input:
         form_result.className = "msg-ok"
         form_result.innerHTML = f"<strong>Thank you, {name_input}!</strong> Your message has been sent to the Signal 200 OK team. We'll get back to you shortly."
-        document.querySelector("#contact-form").reset()
+        contact_form_elem = document.querySelector("#contact-form")
+        if contact_form_elem:
+            contact_form_elem.reset()
 
 contact_form = document.querySelector("#contact-form")
-if contact_form:~
+if contact_form:
     contact_form.onsubmit = handle_contact
