@@ -23,7 +23,7 @@ h1, h2, h3, .brand-name { font-family: "Bricolage Grotesque", system-ui, sans-se
 a { color: inherit; }
 :focus-visible { outline: 3px solid var(--amber); outline-offset: 2px; }
 
-/* Wrapper to unify Header and Hero background to full screen height */
+/* Wrapper to unify Hero background to full screen height */
 .header-hero-wrapper {
   background: var(--navy);
   color: #fff;
@@ -33,12 +33,27 @@ a { color: inherit; }
   justify-content: space-between;
 }
 
-/* Header */
-header { background: transparent; position: sticky; top: 0; z-index: 10; }
-.bar {
-  max-width: 1140px; margin: 0 auto; padding: 24px 28px;
-  display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap;
+/* Header - Made larger and sticky across the entire page */
+header { 
+  background: var(--navy); 
+  position: sticky; 
+  top: 0; 
+  z-index: 1000; 
+  width: 100%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 1);
 }
+
+.bar {
+  max-width: 1140px; 
+  margin: 0 auto; 
+  padding: 32px 28px; /* Increased padding for a larger, taller header */
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between; 
+  gap: 20px; 
+  flex-wrap: wrap;
+}
+
 .brand { display: flex; align-items: center; gap: 14px; text-decoration: none; }
 .brand-name { font-size: 1.5rem; font-weight: 800; color: #fff; letter-spacing: -0.02em; }
 .brand img { transition: transform 0.2s ease; }
